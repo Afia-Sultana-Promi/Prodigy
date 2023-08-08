@@ -20,9 +20,21 @@ const SignUp = () => {
         const password = form.password.value;
         const confirmPassword = form.confirmPassword.value;
 
+        if (!name || !email || !password || !confirmPassword) {
+            setError("You must fill in each field");
+            toast.error("You must fill in each field");
+            return;
+        }
+    
         if (password !== confirmPassword) {
             setError("Password did not match");
-            toast.error(`"Password did not match !"`)
+            toast.error("Password did not match");
+            return;
+        }
+    
+        if (!email.includes('@')) {
+            setError("Wrong email format");
+            toast.error("Wrong email format");
             return;
         }
 
