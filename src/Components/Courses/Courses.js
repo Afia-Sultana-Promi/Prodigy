@@ -12,7 +12,7 @@ const Courses = () => {
 
 
     return (
-        <div className='max-w-7xl mx-auto my-32'>
+        <div className='max-w-7xl mx-auto my-30'>
 
             <h1 className='text-3xl font-bold text-center'>Checkout our courses</h1>
             <div className='grid grid-col-1 md:grid-cols-3 mt-10 gap-10 '>
